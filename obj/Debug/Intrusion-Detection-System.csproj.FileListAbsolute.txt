@@ -1,0 +1,9 @@
+E:\c#\Intrusion-Detection-System\bin\Debug\Intrusion-Detection-System.exe.config
+E:\c#\Intrusion-Detection-System\bin\Debug\Intrusion-Detection-System.exe
+E:\c#\Intrusion-Detection-System\bin\Debug\Intrusion-Detection-System.pdb
+E:\c#\Intrusion-Detection-System\obj\Debug\Intrusion-Detection-System.csprojAssemblyReference.cache
+E:\c#\Intrusion-Detection-System\obj\Debug\Intrusion_Detection_System.Properties.Resources.resources
+E:\c#\Intrusion-Detection-System\obj\Debug\Intrusion-Detection-System.csproj.GenerateResource.cache
+E:\c#\Intrusion-Detection-System\obj\Debug\Intrusion-Detection-System.exe
+E:\c#\Intrusion-Detection-System\obj\Debug\Intrusion-Detection-System.pdb
+E:\c#\Intrusion-Detection-System\obj\Debug\Intrusion_Detection_System.Form1.resources
