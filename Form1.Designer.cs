@@ -28,66 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.watchBtn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.watchFile = new System.Windows.Forms.RadioButton();
+            this.watchFolder = new System.Windows.Forms.RadioButton();
+            this.includeSubCheckbox = new System.Windows.Forms.CheckBox();
+            this.browseBtn = new System.Windows.Forms.Button();
+            this.logTextbox = new System.Windows.Forms.RichTextBox();
+            this.pathTextBox = new System.Windows.Forms.RichTextBox();
+            this.dumpBtn = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // openFileDialog1
+            // watchBtn
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.watchBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.watchBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.watchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchBtn.Location = new System.Drawing.Point(30, 194);
+            this.watchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.watchBtn.Name = "watchBtn";
+            this.watchBtn.Size = new System.Drawing.Size(95, 24);
+            this.watchBtn.TabIndex = 2;
+            this.watchBtn.Text = "Watch";
+            this.watchBtn.UseVisualStyleBackColor = false;
+            this.watchBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // groupBox1
             // 
-            this.button1.Location = new System.Drawing.Point(96, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Select Folder";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.groupBox1.Controls.Add(this.watchFile);
+            this.groupBox1.Controls.Add(this.watchFolder);
+            this.groupBox1.Controls.Add(this.includeSubCheckbox);
+            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
+            this.groupBox1.Location = new System.Drawing.Point(30, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(243, 84);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Options";
             // 
-            // textBox1
+            // watchFile
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 20);
-            this.textBox1.TabIndex = 1;
+            this.watchFile.AutoSize = true;
+            this.watchFile.ForeColor = System.Drawing.Color.Black;
+            this.watchFile.Location = new System.Drawing.Point(6, 19);
+            this.watchFile.Name = "watchFile";
+            this.watchFile.Size = new System.Drawing.Size(81, 17);
+            this.watchFile.TabIndex = 1;
+            this.watchFile.TabStop = true;
+            this.watchFile.Text = "Watch Files";
+            this.watchFile.UseVisualStyleBackColor = true;
+            this.watchFile.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // button2
+            // watchFolder
             // 
-            this.button2.Location = new System.Drawing.Point(279, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 41);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Watch";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.watchFolder.AutoSize = true;
+            this.watchFolder.ForeColor = System.Drawing.Color.Black;
+            this.watchFolder.Location = new System.Drawing.Point(6, 50);
+            this.watchFolder.Name = "watchFolder";
+            this.watchFolder.Size = new System.Drawing.Size(89, 17);
+            this.watchFolder.TabIndex = 1;
+            this.watchFolder.TabStop = true;
+            this.watchFolder.Text = "Watch Folder";
+            this.watchFolder.UseVisualStyleBackColor = true;
+            // 
+            // includeSubCheckbox
+            // 
+            this.includeSubCheckbox.AutoSize = true;
+            this.includeSubCheckbox.ForeColor = System.Drawing.Color.Black;
+            this.includeSubCheckbox.Location = new System.Drawing.Point(106, 50);
+            this.includeSubCheckbox.Name = "includeSubCheckbox";
+            this.includeSubCheckbox.Size = new System.Drawing.Size(131, 17);
+            this.includeSubCheckbox.TabIndex = 0;
+            this.includeSubCheckbox.Text = "Include Subdirectories";
+            this.includeSubCheckbox.UseVisualStyleBackColor = true;
+            this.includeSubCheckbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // browseBtn
+            // 
+            this.browseBtn.Location = new System.Drawing.Point(299, 144);
+            this.browseBtn.Name = "browseBtn";
+            this.browseBtn.Size = new System.Drawing.Size(96, 27);
+            this.browseBtn.TabIndex = 4;
+            this.browseBtn.Text = "Browse";
+            this.browseBtn.UseVisualStyleBackColor = true;
+            this.browseBtn.Click += new System.EventHandler(this.Browse_Click);
+            // 
+            // logTextbox
+            // 
+            this.logTextbox.Location = new System.Drawing.Point(29, 262);
+            this.logTextbox.Name = "logTextbox";
+            this.logTextbox.Size = new System.Drawing.Size(366, 151);
+            this.logTextbox.TabIndex = 5;
+            this.logTextbox.Text = "";
+            // 
+            // pathTextBox
+            // 
+            this.pathTextBox.EnableAutoDragDrop = true;
+            this.pathTextBox.Location = new System.Drawing.Point(29, 151);
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.Size = new System.Drawing.Size(243, 19);
+            this.pathTextBox.TabIndex = 6;
+            this.pathTextBox.Text = "";
+            // 
+            // dumpBtn
+            // 
+            this.dumpBtn.Location = new System.Drawing.Point(36, 442);
+            this.dumpBtn.Name = "dumpBtn";
+            this.dumpBtn.Size = new System.Drawing.Size(107, 25);
+            this.dumpBtn.TabIndex = 7;
+            this.dumpBtn.Text = "Dump To Log";
+            this.dumpBtn.UseVisualStyleBackColor = true;
+            this.dumpBtn.Click += new System.EventHandler(this.dumpBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(456, 493);
+            this.Controls.Add(this.dumpBtn);
+            this.Controls.Add(this.pathTextBox);
+            this.Controls.Add(this.logTextbox);
+            this.Controls.Add(this.browseBtn);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.watchBtn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FileWatcher";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button watchBtn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox includeSubCheckbox;
+        private System.Windows.Forms.RadioButton watchFolder;
+        private System.Windows.Forms.RadioButton watchFile;
+        private System.Windows.Forms.Button browseBtn;
+        private System.Windows.Forms.RichTextBox logTextbox;
+        private System.Windows.Forms.RichTextBox pathTextBox;
+        private System.Windows.Forms.Button dumpBtn;
     }
 }
 
